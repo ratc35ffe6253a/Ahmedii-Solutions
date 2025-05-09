@@ -1,0 +1,266 @@
+/* ===== BASE STYLES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #007af3;
+  --background-light: #f2f2f2;
+  --text-dark: #333;
+  --accent-green: #28a745;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--background-light);
+  color: var(--text-dark);
+  padding-top: 80px; /* Ensure content sits below fixed navbar */
+}
+
+section {
+  padding: 5em 2em;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  height: 25px;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272e;
+  height: 100vh;
+  padding: 1em;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: .5em;
+  cursor: pointer;
+}
+
+nav ul.middle-nav {
+  margin-top: 5em;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+nav li a:hover {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    align-items: center;
+  }
+
+  nav {
+    display: flex !important;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul.middle-nav {
+    margin: 0;
+  }
+
+  nav li a {
+    color: black;
+    font-size: 1em;
+    padding: .1em 1em;
+  }
+
+  nav li.go-premium-cta a {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 5em;
+    margin-top: -.2em;
+  }
+
+  nav li.go-premium-cta a:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+
+/* Main Contact Section Layout */
+.contact-hero {
+  background: url('../header-imges/contact-hero.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-form-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #155ab6;
+}
+
+/* Contact Info Box */
+.contact-details {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-details h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #1a73e8;
+}
+
+.contact-details p {
+  margin: 10px 0;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  color: #1a73e8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form-section .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .blog-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .left {
+            transform: translateY(20px);
+        }
+
+        .right {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left, .right {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card left">
+            <i class="fa fa-code icon"></i>
+            <h3>Web Development</h3>
+            <p>We build fast, secure, and user-friendly websites that drive results.</p>
+        </div>
+
+        <div class="card right">
+            <i class="fa fa-paint-brush icon"></i>
+            <h3>Logo Design</h3>
+            <p>Creative, timeless, and impactful logos that elevate your brand identity.</p>
+        </div>
+
+        <div class="card left">
+            <i class="fa fa-tools icon"></i>
+            <h3>Computer Maintenance</h3>
+            <p>Reliable IT support to keep your systems running at peak performance.</p>
+        </div>
+
+        <div class="card right">
+            <i class="fa fa-lightbulb icon"></i>
+            <h3>IT Consultancy</h3>
+            <p>Smart IT strategies and solutions tailored to your business needs.</p>
+        </div>
+    </div>
+
+</body>
+</html>

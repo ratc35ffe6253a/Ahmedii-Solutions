@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages</title>
+
+  <link rel="stylesheet" href="../assets/styles/packages.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+
+    <header>
+      <div class="navbar">
+        <div class="container">
+          <img class="logo" src="../assets/images/logo.jpg" alt="ahmediisolutions">
+  
+          <img id="mobile-cta" class="mobile-menu" src="../assets/header-imges/menu.svg" alt="Menu Icon">
+  
+          <nav>
+            <img id="mobile-exit" class="mobile-menu-exit" src="../assets/header-imges/exit.svg" alt="Close Navigation">
+  
+            <ul class="middle-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../pages/Services.html">Services</a></li>
+              <li><a href="../pages/Blog.html">Blog</a></li>
+            </ul>
+  
+            <ul class="right-nav">
+              <li><a href="../pages/Contact.html">Contact</a></li>
+              <li class="go-premium-cta"><a href="../pages/Packages.html">Go Premium</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="packages-header">
+      <h1>Our Service Packages</h1>
+      <p>Choose the best plan that suits your business needs</p>
+    </section>
+  
+    <!-- Pricing Toggle -->
+    <section class="toggle-section">
+      <label class="toggle-label">
+        <input type="checkbox" id="priceToggle" />
+        <span class="toggle-slider"></span>
+        <span class="toggle-text">Monthly / Yearly</span>
+      </label>
+    </section>
+  
+    <!-- Packages Section -->
+    <section class="packages-container">
+      <div class="package-card">
+        <h2>Starter Plan</h2>
+        <p class="price monthly">Ksh 2,500/month</p>
+        <p class="price yearly hidden">Ksh 25,000/year</p>
+        <ul>
+          <li>Basic Computer Maintenance</li>
+          <li>Software Installation</li>
+          <li>Email Support</li>
+        </ul>
+        <button class="select-btn">Choose Plan</button>
+      </div>
+  
+      <div class="package-card featured">
+        <h2>Business Pro</h2>
+        <p class="price monthly">Ksh 5,000/month</p>
+        <p class="price yearly hidden">Ksh 50,000/year</p>
+        <ul>
+          <li>Website Maintenance</li>
+          <li>Full IT Support</li>
+          <li>Priority Assistance</li>
+        </ul>
+        <button class="select-btn">Choose Plan</button>
+      </div>
+  
+      <div class="package-card">
+        <h2>Premium Plus</h2>
+        <p class="price monthly">Ksh 8,000/month</p>
+        <p class="price yearly hidden">Ksh 80,000/year</p>
+        <ul>
+          <li>Custom Software Development</li>
+          <li>Network Setup (Wi-Fi/CCTV)</li>
+          <li>On-site Support</li>
+        </ul>
+        <button class="select-btn">Choose Plan</button>
+      </div>
+    </section>
+
+      
+
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section company-info">
+        <h3>Ahmedii Solutions</h3>
+        <p>Custom ICT Solutions for modern businesses. Reliable, Affordable, Professional.</p>
+      </div>
+  
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../pages/Contact.html">Contact</a></li>
+          <li><a href="../pages/Services.html">Services</a></li>
+          <li><a href="../pages/Blog.html">Blog</a></li>
+          <li><a href="../pages/Packages.html">Packages</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section contact-info">
+        <h4>Contact</h4>
+        <p>Email: info@ahmediisolutions.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ahmedii Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-cta')
+      nav = document.querySelector('nav')
+      mobileBtnExit = document.getElementById('mobile-exit');
+
+    mobileBtn.addEventListener('click', () => {
+      nav.classList.add('menu-btn');
+    });
+
+    mobileBtnExit.addEventListener('click', () => {
+      nav.classList.remove('menu-btn');
+    });
+  </script>
+
+
+  <script>
+    const toggle = document.getElementById('priceToggle');
+    const monthlyPrices = document.querySelectorAll('.price.monthly');
+    const yearlyPrices = document.querySelectorAll('.price.yearly');
+
+    toggle.addEventListener('change', () => {
+      monthlyPrices.forEach(price => price.classList.toggle('hidden'));
+      yearlyPrices.forEach(price => price.classList.toggle('hidden'));
+    });
+  </script>
+  
+
+
+</body>
+</html>

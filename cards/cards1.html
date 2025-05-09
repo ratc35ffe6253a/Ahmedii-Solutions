@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        main {
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .left-segment {
+            flex: 2; /* Cards take the left segment */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .right-segment {
+            flex: 1; /* Empty space on the right */
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .left-segment {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="left-segment">
+            <div class="card">
+                <i class="fa fa-code icon"></i>
+                <h3>Web Development</h3>
+                <p>We build fast, secure, and user-friendly websites that drive results.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa fa-paint-brush icon"></i>
+                <h3>Logo Design</h3>
+                <p>Creative, timeless, and impactful logos that elevate your brand identity.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa fa-tools icon"></i>
+                <h3>Computer Maintenance</h3>
+                <p>Reliable IT support to keep your systems running at peak performance.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa fa-lightbulb icon"></i>
+                <h3>IT Consultancy</h3>
+                <p>Smart IT strategies and solutions tailored to your business needs.</p>
+            </div>
+        </section>
+
+        <aside class="right-segment">
+            <!-- This section remains empty for now, but can be used for additional content -->
+        </aside>
+    </main>
+
+</body>
+</html>
